@@ -1,0 +1,176 @@
+// variable
+$current-width: 1200px;
+$mobile-width: 280px;
+$tablet-width: 820px;
+$laptop-width: 1024px;
+$desktop-width: 1200px;
+$font : 'GmarketSans'!important;
+$noto-kr : 'Noto Sans KR'!important;
+$color1: #ff9900;
+$color2: #7b18b9;
+$box-shadow: 10px 8px 13px 0px rgba(0, 0, 0, 0.15);
+
+// mixin
+@mixin mobile {
+  @media (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$current-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$current-width}) {
+    @content;
+  }
+}
+@mixin font-n($size) {
+	font-size: calc($size*0.1rem)!important;
+}
+@mixin font-base {
+	font-size: 2.2rem;
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+@mixin font-48 {
+	line-height: 1.208;
+	font-size: 4.8rem!important;
+  @include mobile {
+    font-size: 1.5rem!important;
+  }
+}
+@mixin font-38 { 
+	line-height: 1.263;
+	font-size: 3.8rem!important;
+  @include mobile {
+    font-size: 1.2rem!important;
+  }
+}
+@mixin font-30 {
+	line-height: 1.333;
+	font-size: 3rem!important;
+  @include mobile {
+    font-size: 1.2rem!important;
+  }
+}
+@mixin font-28 {
+	line-height: 1.333;
+	font-size: 2.8rem!important;
+  @include mobile {
+    font-size: 1.2rem!important;
+  }
+}
+@mixin font-24 {
+	line-height: 1.416;
+	font-size: 2.4rem!important;
+  @include mobile {
+    font-size: 1rem!important;
+  }
+}
+@mixin font-22 {
+	line-height: 1.545;
+	font-size: 2.2rem!important;
+  @include mobile {
+    font-size: 1rem!important;
+  }
+}
+@mixin font-20 {
+	font-size: 2rem!important;
+  @include mobile {
+    font-size: 1rem!important;
+  }
+}
+@mixin font-18 {
+	line-height: 1.555;
+	font-size: 1.8rem!important;
+  @include mobile {
+    font-size: .9rem!important;
+  }
+}
+@mixin font-14 {
+	font-size: 1.4rem!important;
+  @media (max-width: #{$tablet-width}) {
+    font-size: 1rem!important;
+  }
+}
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@content;
+}
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	@content;
+}
+@mixin col-3 {
+	flex: calc(100% / 4);
+	max-width: calc(100% / 4 - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+	@include laptop() {
+		flex: calc(100% / 2);
+		max-width: calc(100% / 2 - 1rem);
+		margin-bottom: 1rem;
+	}
+}
+@mixin col-4 {
+	flex: calc(100% / 3);
+	max-width: calc(100% / 3 - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+	@include laptop() {
+		flex: calc(100% / 2);
+		max-width: calc(100% / 2 - 1rem);
+		margin-bottom: 1rem;
+	}
+}
+@mixin col-6 {
+	flex: calc(100% / 2);
+	max-width: calc(100% / 2 - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+@mixin col-8 {
+	flex: calc(100% / 1.5);
+	max-width: calc(100% / 1.5 - 1rem);
+	@include mobile {
+		flex: 100%;
+		max-width: 100%;
+		margin-bottom: 1rem;
+	}
+	@include laptop() {
+		flex: calc(100% / 2);
+		max-width: calc(100% / 2 - 1rem);
+		margin-bottom: 1rem;
+	}
+}
+@mixin type-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 38px;
+	@content;
+	border-radius: 38px;
+	@include font-20;
+	font-weight: 500;
+	color: #fff;		
+}

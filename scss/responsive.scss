@@ -1,0 +1,543 @@
+@import "_codeset.scss";
+
+@media screen and (min-width: 280px) and (max-width: 319px) {
+	html, body {
+		font-size: 50%!important;
+	}
+}
+@media screen and (max-width: 320px) {
+	html, body {
+		font-size: 62.5%!important;
+	}
+}
+@media screen and (min-width: 360px) and (max-width: 413px)  {
+	html, body {
+		font-size: 70.31%!important;
+	}
+}
+@media screen and (min-width: 414px) and (max-width: 1023px) {
+	html, body {
+		font-size: 80.85%!important;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+	html, body {
+		font-size: 50%!important;
+	}
+}
+
+@include mobile {
+  .display-large {
+    display: none;
+  }
+  .display-small {
+    display: block;
+  }
+  .contents-row {
+    min-height: auto;
+    padding: 40px 15px!important;
+  }
+  .fusion-columns .fusion-column {
+    margin-bottom: 0!important;
+  }
+  .btn-contact {
+    width: 6.25rem;
+    height: 6.25rem;
+    padding-top: 0;
+    background-image: url(https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/07/28165210/btn-contact-bg.png);
+  }
+  .contents-title {
+    margin-bottom: 1rem;
+    h2 {
+      margin-bottom: .7rem;
+      padding: 0 .5rem;
+      &.bottom-line::after {
+        height: 1rem;
+      }
+    }
+  }
+  .title {
+    margin-bottom: 0!important;
+  }
+  #header-bar {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+    .logo-block {
+
+    }
+  }
+  #section-main {
+    .contents-inner {
+      padding: 0;
+    }
+    .key-visual {
+      width: 80vw;
+      min-height: 24rem;
+    }
+    .main-title {
+      margin: 1rem 0 2.4rem;
+    }
+    dl {
+      min-width: auto;
+      height: auto;
+      margin-top: 1rem;
+      padding: .8rem 1.5rem .5rem;
+      border-radius: 23px;
+    }
+    dd {
+      margin-right: 0;
+    }
+    .btn-contact {
+      bottom: -12vh;
+    }
+  }
+  #section-intro {
+    .megajam {
+      margin-bottom: 2rem;
+    }
+    .company {
+      h3 {
+        margin-bottom: 2rem;
+      }
+      .radius-box {
+        margin-bottom: 1rem;
+        padding: 1.5rem 1.5rem 6rem;
+        &::after {
+          content: '';
+          top: 1.5rem;
+          right: 1.5rem;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: top right;
+        }
+      }
+      .mzc::after {
+        width: 8.1rem;
+        height: 2.1rem;
+        background-image: url("https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04110837/m-mzc-logo.png");
+      }
+      .aws::after {
+        width: 4.05rem;
+        height: 2.4rem;
+        background-image: url("https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04110835/m-aws-logo.png");
+      }
+      .kmga::after {
+        width: 5.5rem;
+        height: 2.35rem;
+        background-image: url("https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04110941/m-kmga-logo-1.png");
+      }
+      .kigs::after {
+        width: 4.55rem;
+        height: 2.95rem;
+        background-image: url("https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04110837/m-kmga-logo.png");
+      }
+      a {
+        position: absolute;
+        bottom: 1.5rem;
+        right: initial;
+        left: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        background-size: 50%;
+      }
+    }
+  }
+  #section-contest {
+    .info-box {
+      margin-bottom: 1rem;
+      .title {
+        height: 3rem;
+        margin: 0!important;
+        border-width: 1px;
+      }
+      .detail {
+        min-height: auto;
+        padding: 1.5rem 1.5rem;
+        dl {
+          margin-bottom: .5rem;
+        }
+        dt, dd {
+          float: none;
+        }
+        dt {
+          padding-left: 1rem;
+          margin-bottom: 0;
+        }
+        dd {
+          max-width: 100%;
+        }
+      }      
+      .guide {
+        min-height: auto;
+        padding: 1.5rem;
+        li {        
+          padding-left: 1rem;        
+          &::before {
+            top: .25rem;
+          }
+        }
+      }
+    }
+  }
+  #section-benefit {
+    .benefit-wrap {
+      flex-flow: column;
+      .prize-box {
+        margin-bottom: 1rem;
+        .title {
+          left: 1.3rem;
+          transform: translate(0);
+          min-width: 4.5rem;
+          padding: 1rem 1.5rem;
+        }
+        .prize-text {
+          margin: 1.5rem 0;
+        }
+      }          
+      .grand-prize {
+        order: 1;
+        width: 100%;
+        min-height: auto;
+        border: 2px solid #7b18b9;
+        &::after {
+          display: none;
+        }
+        .prize-detail {
+          overflow: hidden;
+          min-height: 13.8rem;
+          border-radius: 10px 10px 0 0;
+          img {
+            transform: translateX(-50%) scale(.5);
+            bottom: 0;
+          }
+        }
+        .title {
+          left: 1.3rem;
+        }
+        .team {
+          top: -2rem;
+          right: -1.5rem;
+          width: 6.1rem;
+          height: 6.1rem;
+          em {
+            font-size: 1.1rem;
+            span {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+      .best-prize, .good-prize {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #aaa;
+        .team {
+          display: none;
+          em {
+            font-size: .9rem;
+            span {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .prize-detail {
+            height: 10rem;
+            background-position: 55% 50%;
+            background-repeat: no-repeat;
+            background-size: 10.25rem 7.1rem;
+          img {
+            display: none;
+          }
+        }
+      }
+      .best-prize {
+        order: 2;
+        .prize-detail {
+          background-image: url('https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04141524/m-benefit-best-prize.png');
+        }        
+      }
+      .good-prize {
+        order: 3;
+        .prize-detail {
+          background-image: url('https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04141525/m-benefit-good-prize.png');
+        }        
+      }
+    }
+    .fusion-separator {
+      margin-top: 20px!important;
+      margin-bottom: 20px!important;
+    }
+  }
+  #benefit-swiper {
+    .swiper-container {
+      padding-bottom: 2rem;
+      &::before, &::after {
+        display: none;
+      }
+    }
+    .swiper-nav {
+      display: none;
+    }
+    .swiper-pagination {
+      position: relative;
+      display: block;
+      margin: 1rem 0;
+    }
+    .swiper-slide {
+      max-width: 45vw;
+      .inner-contents .img-block {
+        height: 10rem;
+        border: 2px solid #7b18b9;
+        img {
+          transform: scale(.5);
+        }
+      }
+      .inner-contents .text-block {
+        height: 6.8rem;
+      }
+    }
+  }
+  #rating-criterion {
+    .rating-wrap {
+      padding: 0;
+      &::before {
+        display: none;
+      }
+      .rating-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: auto;
+        background-color: #ddd;
+        border-radius: 25%;
+        li {
+          width: 39vw;
+          height: 39vw;
+          margin: 5px;
+          .img-block {
+            height: 4.5rem;
+            transform: scale(.5);
+          }
+          .type {
+            height: 1.6rem;
+            border-radius: 1.6rem;
+            padding: 0.3rem 1.5rem 0 1.5rem;
+            margin: 1rem 0;
+          }
+          .percent {
+            font-size: 2rem;
+          }
+        }
+      }
+      &+p {
+        margin-top: 1rem;
+      }
+    }
+  }
+  #section-schedule {
+    .schedule-process {
+      .title {
+        height: 3rem;
+        margin-bottom: 0!important;
+      }
+      .layer-process {
+        padding: 1.5rem 1rem;
+        &::after {
+          top: 5.5rem;
+          right: -.8rem;
+          margin-top: -.8rem;
+          width: 1.6rem;
+          height: 1.6rem;
+          background-image: url('https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/04151358/m-arrow-next.png');
+          background-size: 0.45rem;
+          background-position: center;
+        }
+        .align-items {
+          text-align: center;
+          .img-block {          
+            height: 5rem;
+            img {
+              transform: scale(.5);
+            }
+          }
+          .type {
+            width: auto;
+            height: auto;
+            line-height: 1;
+            background-color: transparent;
+            color: #7b18b9;
+            font-weight: 800;
+          }
+          .date {
+            font-size: .9rem!important;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+  }
+  #section-reference {
+    .contents-title {
+      max-width: 100vw;
+      h3 {
+        margin: auto;
+        font-weight: 800;
+      }
+    }
+    .swiper-container {
+      &::before, &::after {
+        display: none;
+      }
+    }
+    .swiper-nav {
+      display: none;
+    }
+    .swiper-pagination {
+      display: block;
+    }
+    .swiper {
+      .swiper-slide {
+        max-width: 45vw;
+        .inner-contents .img-block {
+          height: 10rem;
+          img {
+            transform: scale(.5);
+          }
+        }
+        .inner-contents .text-block {
+          height: auto;
+          min-height: 6.8rem;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+  #section-faq {
+    .accordion {
+      position: relative;
+      width: 100%;
+      height: 4.5rem;
+      padding: 0 1.5rem;
+      &.active {
+        border-radius: 10px 10px 0 0;
+      }
+      p {
+        flex: 75%;
+        padding-top: .2rem;
+        padding-right: 1rem;
+        word-break: keep-all;
+      }
+      .cross {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        &::before {
+          width: 9px;
+          height: 1px;
+          margin-top: -.5px;
+        }
+        &::after {
+          width: 1px;
+          height: 9px;
+          margin-top: -4.5px;
+        }
+      }
+    }
+    .panel {
+      p {
+        padding: 2rem 1.5rem 1.5rem;
+      }
+    }
+    .contact-mail {
+      margin-top: 1rem;      
+      .flex-contents {
+        padding: 1.5rem;
+        p {
+          word-break: keep-all;
+        }
+      }
+    }
+  }
+  #section-terms {
+    li {
+      padding-left: 1rem;
+    }
+  }
+  .fusion-footer-widget-area {
+    .copy {
+      height: 5rem;
+      p {
+        margin: 0;
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+@include tablet {
+  #rating-criterion .rating-wrap .rating-list li .img-block {
+    height: auto;
+    transform: scale(1);
+  }
+  #section-benefit .benefit-wrap {
+    flex-flow: initial;
+  }
+  #section-benefit .benefit-wrap .prize-box {
+    max-width: 32vw;
+    margin: 0 15px;
+  }
+  #section-benefit .benefit-wrap .grand-prize {
+    order: 2;
+  }
+  #section-benefit .benefit-wrap .best-prize {
+    order: 1;
+  }
+  #benefit-swiper .swiper-container {
+    padding-right: 15px;
+  }
+  #benefit-swiper .swiper-slide {
+    max-width: 30vw;
+  }
+  #rating-criterion .rating-wrap .rating-list {
+    padding: 10px;
+    border-radius: 10vh;
+  }
+  #rating-criterion .rating-wrap .rating-list li {
+    width: 22vw;
+    height: 22vw;
+  }
+  #section-reference .swiper .swiper-slide {
+    max-width: 30vw;
+  }
+}
+
+@include laptop {
+  .display-small {
+    display: none;
+  }
+  .contents-row {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  }
+  #main-nav {
+    left: 15px;
+  }
+  #benefit-swiper .swiper-container {
+    padding-right: 15px;
+  }
+  #benefit-swiper .swiper-nav {
+    right: 15px;
+  }
+  #section-schedule .schedule-process .layer-process::after {
+    padding: 1rem;
+  }
+}
+
+@include desktop {
+  .display-small {
+    display: none;
+  }
+}

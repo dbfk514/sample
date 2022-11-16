@@ -1,0 +1,325 @@
+@import "_codeset.scss";
+
+/*
+		** DEFAULT STYLES
+*/
+
+* {
+	box-sizing: border-box;
+}
+/* font styles */
+html, body {
+	font-size: 62.5%;
+	letter-spacing: 0;
+}
+.post-content {
+  h1, h2, h3, h4, div, p, span, a, button {
+    font-family: $font;
+    letter-spacing: -0.25em;
+  }
+	div, p, span, a, button {
+		@include font-base;
+	}
+  a {
+    text-decoration: none!important;
+  }
+}
+.flex-container {
+  .flex-contents {
+	display: flex;
+	justify-content: space-between;
+  flex-wrap: wrap;
+    > .col-3 {
+      @include col-3;
+    }
+    > .col-4 {
+      @include col-4;
+    }
+    > .col-6 {
+      @include col-6;
+    }
+    > .col-8 {
+      @include col-8;
+    }
+  }
+}
+.text-center {
+	text-align: center;
+  margin: auto;
+}
+
+/* main-nav styles */
+#main-nav {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+.main-nav .nav-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.main-nav .nav-menu li {
+  position: relative;
+  min-width: 13rem;
+  text-align: left;
+  margin: 5px 0;
+}
+.main-nav .nav-menu li .dot {
+  display: block;
+  color: #fff;
+}
+.main-nav .nav-menu li .dot::before,
+.main-nav .nav-menu li .dot::after {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  top: 50%;
+  transition: all 0.3s ease;
+}
+.main-nav .nav-menu li .dot::before {
+  width: 5px;
+  height: 5px;
+  left: 0;
+  border: 2px solid #888;
+  transform: translateY(-50%);
+}
+.main-nav .nav-menu li .dot::after {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #444;
+  left: -5px;
+  transform: translateY(-50%) scale(0);
+}
+.main-nav .nav-menu li .dot.active::before,
+.main-nav .nav-menu li:hover .dot::before {
+  background: #444;
+  border-color: #444;
+}
+.main-nav .nav-menu li .dot.active::after,
+.main-nav .nav-menu li:hover .dot::after {
+  transform: translateY(-50%) scale(1);
+}
+.main-nav .nav-menu li .dot span {
+  display: inline-block;
+  opacity: 0;
+  text-transform: capitalize;
+  background-color: #ff9900;
+  padding: 8px 14px;
+  border-radius: 3px;
+  margin-left: 30px;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+	box-shadow: 1px 4px 6px 0px rgb(0 0 0 / 15%);
+}
+.main-nav .nav-menu li .dot span::before {
+  display: block;
+  position: absolute;
+  content: "";
+  border-right: 7px solid #ff9900;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  top: 50%;
+  transform: translate(-7px, -50%);
+  left: 0;
+  transition: all 0.3s ease;
+}
+.main-nav .nav-menu li .dot.active span,
+.main-nav .nav-menu li:hover .dot span {
+	transform: translateX(0px);
+	font-weight: 800;
+  opacity: 1;
+}
+
+// #header-bar
+#header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 9rem;
+  padding: 0 2.09vw;
+  border-bottom: 1px solid #fff!important;
+	transition: .4s;
+  z-index: 9999;
+	&.scroll-down {
+		background-color: #7b18b9!important;
+		box-shadow: $box-shadow;
+		border-bottom-color: transparent!important;
+	}
+}
+
+.contents-row {
+  min-height: 1000px;
+  padding: 100px 0!important;
+}
+
+.fusion-footer-widget-area {
+  padding: 0!important;
+  .copy {
+    @include flex-center;
+    height: 10rem;
+    background-color: #232323;
+    text-align: center;
+    p {
+      margin: 0;
+      font-family: $noto-kr;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #fff;
+    }
+  }
+}
+
+#mobile-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  &.scroll-down {
+    .nav-wrap {
+      background-color: #7b18b9!important;
+      box-shadow: $box-shadow;
+      border-bottom-color: transparent!important;
+    }		
+	}
+  .nav-wrap {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    padding: 0 15px;
+    border-bottom: 1px solid #fff;
+    align-items: center;
+    justify-content: space-between;
+    .nav-opener {
+      span {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #fff;
+      }
+    }
+    .logo-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        display: block;
+        margin: 0 .5rem;
+        &.mzc {
+          width: 6.05rem;
+          height: 1.6rem;
+        }
+        &.aws {
+          width: 3rem;
+          height: 1.8rem;
+        }
+      }
+    }
+  }  
+  .overlay {
+    position: fixed;
+    overflow-x: hidden;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #eeeeee;
+    z-index: 1;
+    transition: 0.15s;
+    .logo-block {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 4rem;
+      padding: 0 15px;
+      background-color: $color2;
+      box-shadow: $box-shadow;
+      a {
+        display: block;
+        margin: 0 .5rem;
+        &.mzc {
+          width: 6.05rem;
+          height: 1.6rem;
+        }
+        &.aws {
+          width: 3rem;
+          height: 1.8rem;
+        }
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 0.85rem;
+      right: 13px;
+      height: 2.3rem;
+      font-size: 2.3rem;
+      line-height: 2.3rem;
+      color: #fff;
+    }
+    .overlay-content {
+      list-style: none;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+        padding: 0 2rem;
+        border-bottom: 1px solid #ccc;
+        &::after {
+          content: url('https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/08/05110625/mobile-nav-arrow.png');
+          position: absolute;
+          right: 2rem;
+          transform: translate(50%) scale(.5);
+        }
+        a {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 3.5rem;
+          padding-top: .3rem;
+        }
+        span {
+          line-height: 1;
+          font-family: $font;
+          font-size: 1.4rem;
+          color: #444;
+        }
+      }
+    }
+  }
+}
+
+
+// yura
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
+.inner{
+  max-width: 1200px;
+  min-width: 750px;
+  margin: 0 auto;
+}
+body{
+  // font-family: 'Roboto', sans-serif;
+  font-family: Roboto, Helvetica, Arial, Verdana, sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+

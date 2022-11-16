@@ -1,0 +1,72 @@
+@import "_codeset.scss";
+
+.contents-title {
+  margin-bottom: 5rem;
+  h2 {
+    position: relative;
+    display: inline-block;
+    @include font-48;
+    margin-bottom: 1rem;
+    padding: 0 1.2rem;
+    &.bottom-line::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      display: inline-block;
+      width: 100%;
+      height: 2.2rem;
+      background-color: #ccc;
+    }
+  }
+  h3 {
+    margin: 0;
+    @include font-30;
+  }
+}
+
+.btn-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  height: 14rem;
+  padding-top: .3rem;
+  border-radius: 100%;
+  background-image: url('https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/07/28165210/btn-contact-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  @include font-24;
+  font-weight: 500;
+  color: #000!important;
+  box-shadow: 5px 4px 14.76px 3.24px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 11rem;
+  .swiper-button-next, .swiper-button-prev {
+    position: initial;
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    background-color: #cccccc;
+    border-radius: 100%;
+    &::before {
+      content: url('https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/07/29140413/arrow-next.png');
+      display: block;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    &::before {
+      transform: rotateY(-180deg);;
+    }
+  }
+}

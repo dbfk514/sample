@@ -1,0 +1,100 @@
+.contents-title {
+  margin-bottom: 5rem;
+}
+.contents-title h2 {
+  position: relative;
+  display: inline-block;
+  line-height: 1.208;
+  font-size: 4.8rem !important;
+  margin-bottom: 1rem;
+  padding: 0 1.2rem;
+}
+@media (max-width: 1023px) {
+  .contents-title h2 {
+    font-size: 1.5rem !important;
+  }
+}
+.contents-title h2.bottom-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+  height: 2.2rem;
+  background-color: #ccc;
+}
+.contents-title h3 {
+  margin: 0;
+  line-height: 1.333;
+  font-size: 3rem !important;
+}
+@media (max-width: 1023px) {
+  .contents-title h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
+.btn-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 14rem;
+  height: 14rem;
+  padding-top: 0.3rem;
+  border-radius: 100%;
+  background-image: url("https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/07/28165210/btn-contact-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.416;
+  font-size: 2.4rem !important;
+  font-weight: 500;
+  color: #000 !important;
+  -webkit-box-shadow: 5px 4px 14.76px 3.24px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 4px 14.76px 3.24px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1023px) {
+  .btn-contact {
+    font-size: 1rem !important;
+  }
+}
+
+.swiper-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 11rem;
+}
+.swiper-nav .swiper-button-next, .swiper-nav .swiper-button-prev {
+  position: initial;
+  margin: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #cccccc;
+  border-radius: 100%;
+}
+.swiper-nav .swiper-button-next::before, .swiper-nav .swiper-button-prev::before {
+  content: url("https://imgnew.megazone.com/2022megajam/wp-content/uploads/2022/07/29140413/arrow-next.png");
+  display: block;
+}
+.swiper-nav .swiper-button-next::after, .swiper-nav .swiper-button-prev::after {
+  display: none;
+}
+.swiper-nav .swiper-button-prev::before {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
